@@ -1,0 +1,23 @@
+{
+  "name": "rbac-api",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node --loader @swc-node/register src/main.ts",
+    "dev": "nodemon --watch src --ext ts --exec \"node --loader @swc-node/register src/main.ts\"",
+    "test": "jest",
+    "test:unit": "jest --testPathPattern=spec.ts",
+    "test:integration": "jest --testPathPattern=integration.spec.ts",
+    "test:e2e": "jest --testPathPattern=e2e.spec.ts",
+    "test:security": "jest --testPathPattern=security.spec.ts",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:verbose": "jest --verbose",
+    "test:debug": "jest --detectOpenHandles --forceExit",
+    "test:ci": "jest --ci --coverage --watchAll=false",
+    "migration:run": "typeorm migration:run -d src/database/data-source.ts",
+    "migration:generate": "typeorm migration:generate -d src/database/data-source.ts",
+    "migration:revert": "typeorm migration:revert -d src/database/data-source.ts",
+    "seed": "ts-node src/database/seeds/seed.ts",
+    "seed:test": "NODE_ENV=test ts-node src/database/seeds/seed.ts"
+  }
+}
