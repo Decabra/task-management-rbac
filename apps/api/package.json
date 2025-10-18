@@ -18,6 +18,10 @@
     "migration:generate": "typeorm migration:generate -d src/database/data-source.ts",
     "migration:revert": "typeorm migration:revert -d src/database/data-source.ts",
     "seed": "ts-node src/database/seeds/seed.ts",
-    "seed:test": "NODE_ENV=test ts-node src/database/seeds/seed.ts"
+    "seed:test": "NODE_ENV=test ts-node src/database/seeds/seed.ts",
+    "build": "webpack --config webpack.config.js"
+  },
+  "dependencies": {
+    "webpack-node-externals": "^3.0.0"
   }
 }

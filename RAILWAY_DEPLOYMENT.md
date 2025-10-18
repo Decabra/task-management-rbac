@@ -147,14 +147,17 @@ For better frontend performance:
 
 ### **Manual (You need to set these):**
 ```bash
-# Set JWT secret
-railway variables set JWT_SECRET=your-super-secret-jwt-key
+# Check current variables
+railway variables
 
-# Set JWT expiry
-railway variables set JWT_EXPIRY=1800
+# Add new variables (correct syntax)
+railway variables add JWT_SECRET=your-super-secret-jwt-key
+railway variables add JWT_EXPIRY=1800
+railway variables add CORS_ORIGIN=https://your-frontend-url.railway.app
+railway variables add NPM_CONFIG_LEGACY_PEER_DEPS=true
 
-# Set CORS origin (update with your frontend URL)
-railway variables set CORS_ORIGIN=https://your-frontend-url.railway.app
+# Alternative: Use Railway dashboard
+railway open
 ```
 
 ## **📊 Monitoring & Logs**
