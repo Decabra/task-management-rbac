@@ -35,6 +35,7 @@ module.exports = {
       '@libs/auth': path.resolve(__dirname, '../../libs/auth/src')
     },
     fallback: {
+      // Database drivers
       'pg-native': false,
       'react-native-sqlite-storage': false,
       '@google-cloud/spanner': false,
@@ -50,7 +51,19 @@ module.exports = {
       'better-sqlite3': false,
       'sqlite3': false,
       'sql.js': false,
-      'mssql': false
+      'mssql': false,
+      // Microservices dependencies
+      '@grpc/grpc-js': false,
+      '@grpc/proto-loader': false,
+      'kafkajs': false,
+      'mqtt': false,
+      'nats': false,
+      'amqplib': false,
+      'amqp-connection-manager': false,
+      // WebSockets dependencies
+      '@nestjs/platform-socket.io': false,
+      'socket.io': false,
+      'ws': false
     }
   },
   output: {
