@@ -4,9 +4,9 @@ import { JwtService } from '@nestjs/jwt';
 import { UnauthorizedException } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { AuthService } from './auth.service';
-import { User } from '../../database/entities/user/user.entity';
+import { User } from '../../database/entities';
 import { PermissionsService } from '../permission/permission.service';
-import { LoginDto } from '../../dto/login.dto';
+import { LoginDto } from '@libs/data';
 
 describe('AuthService', () => {
   let service: AuthService;

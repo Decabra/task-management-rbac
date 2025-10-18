@@ -5,7 +5,7 @@ import {
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository, ILike, In } from 'typeorm';
-import { Task } from '../../database/entities/task/task.entity';
+import { Task } from '../../database/entities';
 import {
   CreateTaskDto,
   UpdateTaskDto,

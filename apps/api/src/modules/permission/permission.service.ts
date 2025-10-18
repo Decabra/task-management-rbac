@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository, In } from 'typeorm';
-import { Permission } from '../../database/entities/permission/permission.entity';
+import { Permission } from '../../database/entities';
 import { CreatePermissionDto, UpdatePermissionDto } from './permission.dto';
 import { Role } from '@libs/data';
 // Helper function to get the highest role from an array of roles

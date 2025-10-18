@@ -5,11 +5,11 @@ import * as dotenv from 'dotenv';
 // Load environment variables
 dotenv.config({ path: path.join(__dirname, '../../.env') });
 
-import { User } from './entities/user/user.entity';
-import { Organization } from './entities/organization/organization.entity';
-import { Permission } from './entities/permission/permission.entity';
-import { Task } from './entities/task/task.entity';
-import { AuditLog } from './entities/audit-log/audit-log.entity';
+import { User } from './entities';
+import { Organization } from './entities';
+import { Permission } from './entities';
+import { Task } from './entities';
+import { AuditLog } from './entities';
 
 export const dataSourceOptions: DataSourceOptions = {
   type: 'postgres',

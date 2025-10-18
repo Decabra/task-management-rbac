@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { PermissionsService } from '../modules/permission/permission.service';
-import { Permission } from '../database/entities/permission/permission.entity';
-import { Organization } from '../database/entities/organization/organization.entity';
+import { Permission } from '../database/entities';
+import { Organization } from '../database/entities';
 import { RbacGuard } from '@libs/auth';
 import { Reflector } from '@nestjs/core';
 

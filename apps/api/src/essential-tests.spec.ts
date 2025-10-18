@@ -2,7 +2,7 @@ import { Role, TaskStatus } from '@libs/data';
 
 describe('🎯 RBAC Backend - Essential Requirements', () => {
   
-  describe('✅ Core Business Logic - What Works', () => {
+  describe('Core Business Logic - What Works', () => {
     it('should have correct role hierarchy', () => {
       const roles = [Role.OWNER, Role.ADMIN, Role.VIEWER];
       

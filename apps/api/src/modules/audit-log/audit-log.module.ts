@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuditLogService } from './audit-log.service';
 import { AuditLogController } from './audit-log.controller';
-import { AuditLog } from '../../database/entities/audit-log/audit-log.entity';
+import { AuditLog } from '../../database/entities';
 import { CommonModule } from '../../common/common.module';
 
 @Module({

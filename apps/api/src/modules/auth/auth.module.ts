@@ -5,7 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthService } from './auth.service';
 import { AuthController } from './auth.controller';
 import { JwtStrategy } from './strategies/jwt.strategy';
-import { User } from '../../database/entities/user/user.entity';
+import { User } from '../../database/entities';
 import { CommonModule } from '../../common/common.module';
 import { PermissionsModule } from '../permission/permission.module';
 

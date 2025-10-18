@@ -1,4 +1,4 @@
-# 🚀 Secure Task Management System
+# Secure Task Management System
 
 A full-stack, secure task management system built with **NX monorepo**, **NestJS**, **Angular**, and **PostgreSQL**. Features role-based access control (RBAC), JWT authentication, and a modern drag-and-drop interface.
 
@@ -194,7 +194,6 @@ npm run start:dashboard # Frontend on http://localhost:4200
 
 - **Frontend**: http://localhost:4200
 - **API**: http://localhost:3000/api
-- **API Documentation**: http://localhost:3000/api/docs (if Swagger is enabled)
 
 ## 📚 API Documentation
 
@@ -476,14 +475,6 @@ describe('TasksComponent', () => {
 - **Documentation**: Comprehensive API documentation
 - **Testing**: High test coverage with meaningful tests
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests for new functionality
-5. Ensure all tests pass
-6. Submit a pull request
 
 ## 📄 License
 

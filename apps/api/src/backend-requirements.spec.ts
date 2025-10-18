@@ -1,16 +1,8 @@
-import { Test, TestingModule } from '@nestjs/testing';
-import { AuthService } from './modules/auth/auth.service';
-import { User } from './database/entities/user/user.entity';
-import { getRepositoryToken } from '@nestjs/typeorm';
-import { JwtService } from '@nestjs/jwt';
-import { PermissionsService } from './modules/permission/permission.service';
-import { Organization } from './database/entities/organization/organization.entity';
-import { Permission } from './database/entities/permission/permission.entity';
 import { Role } from '@libs/data';
 
 describe('🎯 Backend Requirements - What Actually Matters', () => {
   
-  describe('✅ Core Business Logic Tests', () => {
+  describe('Core Business Logic Tests', () => {
     it('should validate role hierarchy is correct', () => {
       const roleHierarchy = {
         [Role.OWNER]: 3,
@@ -48,7 +40,7 @@ describe('🎯 Backend Requirements - What Actually Matters', () => {
     });
   });
 
-  describe('❌ Critical Issues That Need Fixing', () => {
+  describe('Critical Issues That Need Fixing', () => {
     it('should identify dependency injection problems', () => {
       // This test demonstrates the actual issue: AuthService needs PermissionsService
       const authServiceDependencies = [

@@ -16,7 +16,7 @@ import { Role } from '@libs/data';
 import { PermissionsService } from '../permission/permission.service';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository, In } from 'typeorm';
-import { Organization } from '../../database/entities/organization/organization.entity';
+import { Organization } from '../../database/entities';
 
 @Controller('organizations')
 @UseGuards(JwtAuthGuard, RbacGuard)

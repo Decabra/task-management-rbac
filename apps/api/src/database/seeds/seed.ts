@@ -27,7 +27,7 @@ async function seed() {
 
     // Initialize connection
     await dataSource.initialize();
-    console.log('✅ Database connection established');
+    console.log('Database connection established');
 
     // Clear existing data (in reverse order of dependencies)
     await dataSource.query('DELETE FROM tasks');
@@ -72,7 +72,7 @@ async function seed() {
     `, [acmeOrgId]);
     const hrOrgId = hrOrgResult[0].id;
 
-    console.log('✅ Created 2-level organization hierarchy:');
+    console.log('Created 2-level organization hierarchy:');
     console.log('   ├── Acme Corp (root)');
     console.log('   │   ├── Sales Department');
     console.log('   │   ├── Engineering Department');
@@ -114,7 +114,7 @@ async function seed() {
       createdUsers.push({ id: result[0].id, ...userData });
     }
 
-    console.log('✅ Created users for comprehensive testing');
+    console.log('Created users for comprehensive testing');
 
     // Create Permissions (comprehensive RBAC scenarios)
     const permissions = [
@@ -148,7 +148,7 @@ async function seed() {
       `, [permData.userId, permData.orgId, permData.role]);
     }
 
-    console.log('✅ Created comprehensive RBAC permissions');
+    console.log('Created comprehensive RBAC permissions');
 
     // Create Sample Tasks (comprehensive scenarios across all orgs)
     const tasks = [
@@ -287,7 +287,7 @@ async function seed() {
       `, [task.orgId, task.title, task.description, task.category, task.status, task.orderIndex, task.ownerUserId]);
     }
 
-    console.log('✅ Created sample tasks');
+    console.log('Created sample tasks');
 
     // Create additional test tasks for pagination testing
     const additionalTasks = [];
@@ -318,9 +318,9 @@ async function seed() {
       `, [task.orgId, task.title, task.description, task.category, task.status, task.orderIndex, task.ownerUserId]);
     }
 
-    console.log('✅ Created 20 additional test tasks for pagination');
+    console.log('Created 20 additional test tasks for pagination');
 
-    console.log('\n🎉 Comprehensive seeding completed successfully!');
+    console.log('\nComprehensive seeding completed successfully!');
     console.log('\n📊 Database Summary:');
     console.log('   🏢 Organizations: 5 (1 root + 4 departments)');
     console.log('   👥 Users: 12 (comprehensive role testing)');
@@ -347,7 +347,7 @@ async function seed() {
 
     await dataSource.destroy();
   } catch (error) {
-    console.error('❌ Seeding failed:', error);
+    console.error('Seeding failed:', error);
     process.exit(1);
   }
 }

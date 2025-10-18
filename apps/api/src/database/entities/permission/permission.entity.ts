@@ -9,8 +9,8 @@ import {
   Index,
 } from 'typeorm';
 import { Role } from '@libs/data';
-import { User } from '../user/user.entity';
-import { Organization } from '../organization/organization.entity';
+import { User } from '../user';
+import { Organization } from '../organization';
 
 @Entity('permissions')
 @Index(['userId', 'orgId'], { unique: true })

@@ -49,12 +49,12 @@ async function bootstrap() {
     Logger.log(`🚀 RBAC API Server is running on: http://localhost:${port}/${globalPrefix}`);
     Logger.log(`🌐 API Base URL: http://localhost:${port}/${globalPrefix}`);
   } catch (error) {
-    console.error('❌ Failed to start server:', error);
+    console.error('Failed to start server:', error);
     process.exit(1);
   }
 }
 
 bootstrap().catch((error) => {
-  console.error('❌ Bootstrap failed:', error);
+  console.error('Bootstrap failed:', error);
   process.exit(1);
 });
