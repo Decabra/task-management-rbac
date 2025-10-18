@@ -6,7 +6,6 @@ WORKDIR /app
 
 # Copy package files
 COPY package*.json ./
-COPY apps/api/package*.json ./apps/api/
 
 # Install dependencies
 RUN npm install --legacy-peer-deps
