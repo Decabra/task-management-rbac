@@ -5,7 +5,20 @@ module.exports = {
   entry: './src/main.ts',
   target: 'node',
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
-  externals: [nodeExternals()],
+  externals: [
+    nodeExternals({
+      allowlist: [
+        /^@nestjs\/core/,
+        /^@nestjs\/common/,
+        /^@nestjs\/platform-express/,
+        /^@nestjs\/typeorm/,
+        /^@nestjs\/jwt/,
+        /^@nestjs\/passport/,
+        /^@nestjs\/throttler/,
+        /^@nestjs\/config/
+      ]
+    })
+  ],
   module: {
     rules: [
       {
@@ -19,8 +32,26 @@ module.exports = {
     extensions: ['.ts', '.js'],
     alias: {
       '@libs/data': path.resolve(__dirname, '../../libs/data/src'),
-      '@libs/auth': path.resolve(__dirname, '../../libs/auth/src'),
+      '@libs/auth': path.resolve(__dirname, '../../libs/auth/src')
     },
+    fallback: {
+      'pg-native': false,
+      'react-native-sqlite-storage': false,
+      '@google-cloud/spanner': false,
+      'mongodb': false,
+      '@sap/hana-client': false,
+      'mysql': false,
+      'mysql2': false,
+      'oracledb': false,
+      'pg-query-stream': false,
+      'typeorm-aurora-data-api-driver': false,
+      'redis': false,
+      'ioredis': false,
+      'better-sqlite3': false,
+      'sqlite3': false,
+      'sql.js': false,
+      'mssql': false
+    }
   },
   output: {
     filename: 'main.js',
@@ -28,6 +59,10 @@ module.exports = {
     clean: true,
   },
   optimization: {
-    minimize: process.env.NODE_ENV === 'production',
+    minimize: false
   },
+  ignoreWarnings: [
+    /Critical dependency: the request of a dependency is an expression/,
+    /Module not found: Error: Can't resolve/
+  ]
 };

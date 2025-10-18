@@ -22,6 +22,8 @@
     "build": "webpack --config webpack.config.js"
   },
   "dependencies": {
+    "@nestjs/microservices": "^11.0.0",
+    "@nestjs/websockets": "^11.0.0",
     "webpack-node-externals": "^3.0.0"
   }
 }

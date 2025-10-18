@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ["nodejs-20_19_0", "npm"]
+
+[phases.install]
+cmds = ["npm install --legacy-peer-deps"]
+
+[phases.build]
+cmds = ["cd apps/api && npm run build"]
+
+[start]
+cmd = "npm run start:api"
