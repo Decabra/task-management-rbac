@@ -17,7 +17,10 @@ module.exports = {
         /^@nestjs\/throttler/,
         /^@nestjs\/config/
       ]
-    })
+    }),
+    // Exclude native modules that need to be loaded at runtime
+    'bcrypt',
+    'pg'
   ],
   module: {
     rules: [
