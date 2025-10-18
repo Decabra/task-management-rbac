@@ -1,0 +1,7 @@
+# Railway Configuration for NX Monorepo
+# This file is for reference - Railway uses railway.json instead
+
+# Railway will automatically detect:
+# - Node.js application
+# - PostgreSQL database
+# - Multiple services in monorepo

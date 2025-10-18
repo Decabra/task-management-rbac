@@ -2,7 +2,7 @@
   "name": "rbac-api",
   "version": "1.0.0",
   "scripts": {
-    "start": "node --loader @swc-node/register src/main.ts",
+    "start": "node dist/main.js",
     "dev": "nodemon --watch src --ext ts --exec \"node --loader @swc-node/register src/main.ts\"",
     "test": "jest",
     "test:unit": "jest --testPathPattern=spec.ts",

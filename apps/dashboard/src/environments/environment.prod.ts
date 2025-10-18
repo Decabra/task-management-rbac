@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://localhost:3000/api',
-  apiBaseUrl: 'http://localhost:3000',
+  apiUrl: 'https://rbac-api-production.up.railway.app/api',
+  apiBaseUrl: 'https://rbac-api-production.up.railway.app',
   environment: 'production'
 };

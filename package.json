@@ -8,12 +8,14 @@
   },
   "scripts": {
     "dev:api": "nx serve api --configuration=watch",
-    "start:api": "nx serve api",
+    "start:api": "cd apps/api && npm start",
+    "start:railway": "npm run start:api",
     "start:dashboard": "nx serve dashboard",
     "start:dashboard:production": "nx serve dashboard --configuration=production",
     "start:dev": "npm run start:api && npm run start:dashboard",
     "build:api": "nx build api",
     "build:dashboard": "nx build dashboard",
+    "build:all": "npm run build:api && npm run build:dashboard",
     "test": "nx test",
     "test:api": "nx test api",
     "test:dashboard": "nx test dashboard",
@@ -21,7 +23,8 @@
     "format": "nx format:write",
     "db:migrate": "npx ts-node -r tsconfig-paths/register apps/api/src/database/init-db.ts",
     "db:seed": "npx ts-node apps/api/src/database/seeds/seed.ts",
-    "db:setup": "npm run db:migrate && npm run db:seed"
+    "db:setup": "npm run db:migrate && npm run db:seed",
+    "postinstall": "npm run build:all"
   },
   "keywords": [],
   "author": "",
@@ -89,13 +92,13 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "@angular/animations": "^20.3.6",
-    "@angular/cdk": "^20.2.9",
+    "@angular/animations": "~20.3.0",
+    "@angular/cdk": "~20.3.0",
     "@angular/common": "~20.3.0",
     "@angular/compiler": "~20.3.0",
     "@angular/core": "~20.3.0",
     "@angular/forms": "~20.3.0",
-    "@angular/material": "^20.2.9",
+    "@angular/material": "~20.3.0",
     "@angular/platform-browser": "~20.3.0",
     "@angular/platform-browser-dynamic": "~20.3.0",
     "@angular/router": "~20.3.0",
