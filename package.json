@@ -23,7 +23,7 @@
     "format": "nx format:write",
     "db:migrate": "npx ts-node -r tsconfig-paths/register apps/api/src/database/init-db.ts",
     "db:seed": "npx ts-node apps/api/src/database/seeds/seed.ts",
-    "db:setup": "npm run db:migrate && npm run db:seed",
+    "db:setup": "npm run db:migrate && npm run db:seed"
   },
   "keywords": [],
   "author": "",
