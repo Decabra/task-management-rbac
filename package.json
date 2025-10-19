@@ -132,6 +132,7 @@
     "typeorm": "^0.3.27",
     "webpack-node-externals": "^3.0.0",
     "zone.js": "~0.15.0",
-    "@swc-node/register": "~1.9.1"
+    "@swc-node/register": "~1.9.1",
+    "typescript": "^5.9.3"
   }
 }
