@@ -131,6 +131,7 @@
     "rxjs": "^7.8.0",
     "typeorm": "^0.3.27",
     "webpack-node-externals": "^3.0.0",
-    "zone.js": "~0.15.0"
+    "zone.js": "~0.15.0",
+    "@swc-node/register": "~1.9.1"
   }
 }

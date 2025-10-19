@@ -16,15 +16,8 @@ RUN npm install --legacy-peer-deps
 # Copy source code
 COPY . .
 
-# Build the API
-WORKDIR /app/apps/api
-RUN npm run build
-
-# Set working directory back to root
-WORKDIR /app
-
 # Expose port
 EXPOSE 3000
 
-# Start the application
+# Start the application directly (no build step needed)
 CMD ["npm", "run", "start:api"]
